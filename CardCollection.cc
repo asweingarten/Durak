@@ -8,7 +8,12 @@ CardCollection::CardCollection() {}
 
 //====================================================================
 // CardCollection Destructor
-CardCollection::~CardCollection() {}
+CardCollection::~CardCollection()
+{
+	if ( !this->empty() )
+		this->clear();
+
+}
 
 //====================================================================
 // Prints out the cards in the collection
