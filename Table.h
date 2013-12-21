@@ -8,7 +8,8 @@
 _Monitor Table
 {
   public:
-  	Table();
+  	Table( unsigned int lowestCard );
+  	~Table();
 
   private:
   	typedef CardCollection Deck;
