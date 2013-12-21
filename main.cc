@@ -9,7 +9,8 @@ using namespace std;
 void usage( char* argv[] )
 {
 	cerr << "Usage: " << argv[0]
-		 << " 1 < num-players < 6 [ 1 < lowest-card < 7 ]";
+		 << " 1 < num-players < 6 [ 1 < lowest-card < 7 ]"
+		 << endl;
 
 	exit( EXIT_FAILURE );
 }
@@ -35,9 +36,11 @@ void uMain::main()
 			break;
 
 		default:
-			usage( argv );
+			break;
 	}
 
-	Table *table = new Table();
+	Table *table = new Table( lowestCard );
+
+	delete table;
 
 }
