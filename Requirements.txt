@@ -1,0 +1,40 @@
+Purpose
+
+	This program will allow one human to play the card game Durak versus
+	a number of computer players.
+
+Entities
+
+	Player - _Task
+
+	Table  - _Monitor
+
+	CardCollection - Class
+
+	Card - Struct
+
+
+Use Cases
+
+	Setting up a game of Durak
+		- First game
+		- Subsequent games
+
+	Attacking
+		- First Attacker
+		- Reflection
+		- Secondary Attack
+
+		Alternative
+		- Calling Priority
+
+	Defending
+		- Successfully defend
+		- Pick up
+
+	End of turn
+		- Pick up back to six cards
+
+	End Game
+		- Winning
+		- Losing
