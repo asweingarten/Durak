@@ -1,5 +1,5 @@
-#ifndef CARDCOLLECTION_H
-#define CARDCOLLECTION_H
+#ifndef CARD_H
+#define CARD_H
 
 #define CARD_COUNT 36
 
@@ -25,17 +25,6 @@ struct Card
 
 	Suit suit;
 	Rank rank;
-};
-
-class CardCollection : public std::vector<Card*> {
-public:
-	CardCollection();
-	~CardCollection();
-	void print();
-	void shuffle();
-	void removeCard( Card& );
-
-
 };
 
 bool operator==( const Card&, const Card& ); // Two cards are equal if their ranks are equal
