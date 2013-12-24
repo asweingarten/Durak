@@ -2,6 +2,7 @@
 #define PLAYER_H
 
 #include <uC++.h>
+#include <vector>
 
 _Monitor Table;
 
@@ -15,7 +16,7 @@ _Task Player
 
   	unsigned int id;
   	Table *table;
-  	CardCollection *hand;
+  	std::vector<Card> *hand;
 
 };
 
