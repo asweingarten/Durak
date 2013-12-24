@@ -4,6 +4,8 @@
 #include <uC++.h>
 #include <vector>
 
+#include "Card.h"
+
 _Monitor Table;
 
 _Task Player

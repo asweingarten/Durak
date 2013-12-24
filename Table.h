@@ -4,12 +4,15 @@
 #include <uC++.h>
 #include <list>
 
+#include "Card.h"
+
 _Monitor Table
 {
   public:
   	Table( unsigned int lowestCard );
-  	pickUpCards( std::vector<Card> *hand );
   	~Table();
+
+  	void pickUpCards( std::vector<Card> *hand );
 
   private:
   	std::list<Card*> *deck;

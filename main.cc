@@ -1,8 +1,8 @@
 #include <uC++.h>
 #include <iostream>
 
-#include "CardCollection.h"
 #include "Table.h"
+#include "Player.h"
 
 using namespace std;
 
@@ -41,10 +41,10 @@ void uMain::main()
 
 	Table  *table   = new Table( lowestCard );
 
-	Player *players = new Player*[numPlayers];
+	Player **players = new Player*[numPlayers];
 	for ( unsigned int i = 0; i < numPlayers; i++ )
 	{
-		players[ i ] = new Player( table );
+		players[ i ] = new Player( i, *table );
 	}
 
 	for ( unsigned int i = 0; i < numPlayers; i++ )

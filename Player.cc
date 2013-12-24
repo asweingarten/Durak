@@ -1,7 +1,9 @@
-#include "Player.cc"
+#include "Player.h"
+
+#include "Table.h"
 
 Player::Player( unsigned int id, Table &table ) :
-				table( &table ), id( id ), hand( new CardCollection() )
+				table( &table ), id( id ), hand( new std::vector<Card>() )
 {
 
 }
