@@ -39,8 +39,24 @@ void uMain::main()
 			break;
 	}
 
-	Table *table = new Table( lowestCard );
+	Table  *table   = new Table( lowestCard );
 
+	Player *players = new Player*[numPlayers];
+	for ( unsigned int i = 0; i < numPlayers; i++ )
+	{
+		players[ i ] = new Player( table );
+	}
+
+	for ( unsigned int i = 0; i < numPlayers; i++ )
+	{
+		delete players[ i ];
+	}
+	delete players;
 	delete table;
+
+	// @TODO
+	//	- Deal cards
+	//	- Create game loop
+	//	- Victory Conditions
 
 }
