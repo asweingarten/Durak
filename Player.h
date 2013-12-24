@@ -3,13 +3,20 @@
 
 #include <uC++.h>
 
+_Monitor Table;
+
 _Task Player
 {
   public:
-  	Player();
+  	Player( unsigned int id, Table &table );
 
   private:
   	void main();
+
+  	unsigned int id;
+  	Table *table;
+  	CardCollection *hand;
+
 };
 
 #endif
