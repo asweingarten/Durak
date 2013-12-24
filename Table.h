@@ -12,8 +12,7 @@ _Monitor Table
   	~Table();
 
   private:
-  	typedef CardCollection Deck;
-  	Deck *deck;
+  	CardCollection *deck;
 };
 
 #endif
