@@ -13,6 +13,15 @@ Table::Table( unsigned int lowestCard ) : deck( new CardCollection() )
 	deck->print();
 }
 
+void Table::pickUpCards( CardCollection hand )
+{
+	while ( hand.size() < 6 )
+	{
+		if ( deck.size() == 0 )		// Things will need to be done on this
+			break;
+	}
+}
+
 Table::~Table()
 {
 	delete deck;
