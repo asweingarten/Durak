@@ -3,8 +3,14 @@
 
 #include <uC++.h>
 #include <list>
+#include <algorithm>
+#include <vector>
+#include <cstdlib>
 
+#include "MPRNG.h"
 #include "Card.h"
+
+extern MPRNG randGenerator;
 
 _Monitor Table
 {
@@ -17,6 +23,8 @@ _Monitor Table
   private:
   	std::list<Card*> deck;
   	std::list<Card*>::iterator topCard;
+
+  	void shuffleDeck();
 };
 
 #endif

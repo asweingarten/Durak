@@ -9,6 +9,9 @@ Table::Table( unsigned int lowestCard )
 			deck.push_back( new Card( (Suit)i, (Rank)j ) );
 		}
 	}
+
+	shuffleDeck();
+
 	topCard = deck.begin();
 }
 
@@ -29,5 +32,18 @@ void Table::pickUpCards( std::vector<Card> *hand )
 Table::~Table()
 {
 	deck.clear();
+}
+
+void Table::shuffleDeck()
+{
+	std::vector<Card*> temp( deck.begin(), deck.end() );
+	std::random_shuffle( temp.begin(), temp.end() );	// random_shuffle does not work on lists
+
+	for ( unsigned int i = 0; i < temp.size(); i++ )
+	{
+		deck.pop_back();
+		deck.push_front( temp.back() );
+		temp.pop_back();
+	}
 }
 
