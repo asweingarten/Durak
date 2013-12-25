@@ -3,6 +3,7 @@
 
 #include <uC++.h>
 #include <vector>
+#include <iostream>
 
 #include "Card.h"
 
@@ -15,6 +16,7 @@ _Task Player
 
   private:
   	void main();
+  	void printHand();
 
   	unsigned int id;
   	Table *table;
