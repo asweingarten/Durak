@@ -15,7 +15,8 @@ _Monitor Table
   	void pickUpCards( std::vector<Card> *hand );
 
   private:
-  	std::list<Card*> *deck;
+  	std::list<Card*> deck;
+  	std::list<Card*>::iterator topCard;
 };
 
 #endif
