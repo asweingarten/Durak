@@ -21,7 +21,17 @@ struct Card
 {
 	Card( Suit s, Rank r ) : suit( s ), rank( r ) {}
 
-	std::string toString() const;
+	std::string toString() const
+	{
+		std::string suits[SUIT_COUNT] = {"D", "H", "C", "S"};
+		std::string ranks[RANK_COUNT] = {"2", "3", "4", "5", "6",
+			"7", "8", "9", "10", "J", "Q", "K", "A"};
+		std::string cardString = "";
+
+		cardString += ranks[ rank - 2 ];
+		cardString += suits[ suit ];
+		return cardString;
+	}
 
 	Suit suit;
 	Rank rank;
