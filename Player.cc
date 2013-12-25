@@ -12,7 +12,6 @@ void Player::main()
 {
 	table->pickUpCards( hand );
 
-	std::osacquire( std::cout ) << hand->at(0).toString() << std::endl;
 	printHand();
 
 	while ( true )
@@ -24,5 +23,7 @@ void Player::main()
 void Player::printHand()
 {
 	for ( unsigned int i = 0; i < hand->size(); i++ )
-		hand->at( i ).toString();
+		std::osacquire( std::cout ) << hand->at( i ).toString() << " ";
+
+	std::osacquire( std::cout ) << std::endl;
 }
