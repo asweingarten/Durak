@@ -1,10 +1,14 @@
 #include <uC++.h>
 #include <iostream>
+#include <unistd.h> // getpid()
 
+#include "MPRNG.h"
 #include "Table.h"
 #include "Player.h"
 
 using namespace std;
+
+MPRNG randGenerator;
 
 void usage( char* argv[] )
 {
@@ -20,7 +24,10 @@ void uMain::main()
 
 	unsigned int numPlayers = 2,
 				 lowestCard = 6,
+				 seed = getpid(),
 				 arg;
+
+	randGenerator.seed( seed );
 
 	switch( argc )
 	{
