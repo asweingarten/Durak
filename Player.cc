@@ -12,7 +12,7 @@ void Player::main()
 {
 	table->pickUpCards( hand );
 
-	std::osacquire( std::cout ) << hand->at(0) << std::endl;
+	std::osacquire( std::cout ) << hand->at(0).toString() << std::endl;
 	printHand();
 
 	while ( true )
