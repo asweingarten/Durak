@@ -47,6 +47,8 @@ void uMain::main()
 		players[ i ] = new Player( i, *table );
 	}
 
+
+
 	for ( unsigned int i = 0; i < numPlayers; i++ )
 	{
 		delete players[ i ];
